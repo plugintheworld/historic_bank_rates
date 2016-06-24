@@ -25,9 +25,9 @@ Or install it yourself as:
 
 ## Usage
 
-### Initialize
+### Initialize (NOTE: the date used can affect the success of the import! method)
 
-  ```ruby (NOTE: Use a date within the last 3 months)
+  ```ruby 
   hbr = HistoricBankRates::Rates.new(CentralBankOfKenya.new, Date.new(2016, 05, 30))
   hbr.import! # => true
   ```
