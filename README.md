@@ -27,8 +27,8 @@ Or install it yourself as:
 
 ### Initialize
 
-  ```ruby
-  hbr = HistoricBankRates.new(CentralBankOfKenya, Date.new(2015, 10, 24))
+  ```ruby (NOTE: Use a date within the last 3 months)
+  hbr = HistoricBankRates::Rates.new(CentralBankOfKenya.new, Date.new(2016, 05, 30))
   hbr.import! # => true
   ```
 
