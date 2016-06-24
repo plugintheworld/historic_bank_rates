@@ -1,7 +1,7 @@
 require_relative '../../spec_helper'
 
-describe BankOfTanzania do
-  let(:rate_scraper) { BankOfTanzania.new }
+describe HistoricBankRates::BankScrapers::BankOfTanzania do
+  let(:rate_scraper) { HistoricBankRates::BankScrapers::BankOfTanzania.new }
   let(:valid_date) { Date.new(2016, 06, 16) }
 
   describe '#base_currency' do

@@ -3,46 +3,48 @@ require 'uri'
 require 'net/http'
 
 module HistoricBankRates
-  class RateScraper
-    TRANSLATE = {}
+  module BankScrapers
+    class RateScraper
+      TRANSLATE = {}
 
-    attr_reader :start_date
-    attr_accessor :form_url
+      attr_reader :start_date
+      attr_accessor :form_url
 
-    def initialize
-    end
+      def initialize
+      end
 
-    def call start_date
-      @start_date = start_date
+      def call start_date
+        @start_date = start_date
 
-      rates
-    end
+        rates
+      end
 
-    def base_currency
-      # Must implement
-      raise NotImplementedError
-    end
+      def base_currency
+        # Must implement
+        raise NotImplementedError
+      end
 
-    private
+      private
 
-    def rates
-      # Must implement
-      raise NotImplementedError
-    end
+      def rates
+        # Must implement
+        raise NotImplementedError
+      end
 
-    def form_url
-      # Must implement
-      raise NotImplementedError
-    end
+      def form_url
+        # Must implement
+        raise NotImplementedError
+      end
 
-    def form_params
-      # Must implement
-      raise NotImplementedError
-    end
+      def form_params
+        # Must implement
+        raise NotImplementedError
+      end
 
-    def element_matcher
-      # Must implement
-      raise NotImplementedError
+      def element_matcher
+        # Must implement
+        raise NotImplementedError
+      end
     end
   end
 end

@@ -1,7 +1,7 @@
 require_relative '../../spec_helper'
 
-describe CentralBankOfKenya do
-  let(:rate_scraper) { CentralBankOfKenya.new }
+describe HistoricBankRates::BankScrapers::CentralBankOfKenya do
+  let(:rate_scraper) { HistoricBankRates::BankScrapers::CentralBankOfKenya.new }
   let(:valid_date) { Date.new(2016, 06, 16) }
 
   describe '#base_currency' do

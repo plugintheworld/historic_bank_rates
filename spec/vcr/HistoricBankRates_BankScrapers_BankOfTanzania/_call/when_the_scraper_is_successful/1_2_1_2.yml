@@ -1,0 +1,509 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://www.bot-tz.org/FinancialMarkets/ExchangeRates/ShowExchangeRates.asp
+    body:
+      encoding: US-ASCII
+      string: SelectedExchandeDate=06%2F16%2F16
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - www.bot-tz.org
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '37784'
+      Content-Type:
+      - text/html
+      Server:
+      - Microsoft-IIS/8.5
+      Set-Cookie:
+      - ASPSESSIONIDACRQSDAA=NGBGPOICELINKMMPBHOBLJAJ; path=/
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 24 Jun 2016 12:35:06 GMT
+    body:
+      encoding: UTF-8
+      string: "\r\n<html>\r\n\r\n<head>\r\n<meta http-equiv=\"Content-Language\" content=\"en-gb\">\r\n<meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\r\n<title>Bank
+        of Tanzania: Financial Markets - Indicative Foreign Exchange Market Rates</title>\r\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/bot.css\">\r\n<script type=\"text/javascript\">\r\n\r\nfunction
+        getPos(inputElement) {\r\n    var coords =  new Object();\r\n    coords.x
+        = 0;\r\n    coords.y = 0;\r\n    try {\r\n        targetElement = inputElement;\r\n
+        \       if(targetElement.x && targetElement.y) {\r\n            coords.x =
+        targetElement.x;\r\n            coords.y = targetElement.y;\r\n        } else
+        {\r\n            if(targetElement.offsetParent) {\r\n                coords.x
+        += targetElement.offsetLeft;\r\n                coords.y += targetElement.offsetTop;\r\n
+        \               while(targetElement = targetElement.offsetParent) {\r\n                    coords.x
+        += targetElement.offsetLeft;\r\n                    coords.y += targetElement.offsetTop;\r\n
+        \               }\r\n            } else {\r\n                //alert(\"Could
+        not find any reference for coordinate positioning.\");\r\n            }\r\n
+        \       }\r\n        return coords;\r\n    } catch(error) {\r\n        //alert(error.msg);\r\n
+        \       return coords;\r\n    }\r\n}\r\n\r\nfunction mouseOver(submenu, toplink)\r\n{\r\n\tvar
+        submenuItem = document.getElementById(submenu);\r\n\tvar LinkItem = document.getElementById(toplink);\r\n\tvar
+        yPosition = document.getElementById('yCoordinate');\t\r\n\tvar rowCount =
+        document.getElementById(submenu).getElementsByTagName(\"TR\").length;\r\n\tvar
+        item, item1, test;\r\n\r\n\tsubmenuItem.style.left = getPos(LinkItem).x +
+        'px'; \r\n\tsubmenuItem.style.top = getPos(LinkItem).y + LinkItem.offsetHeight
+        -1 + 'px';\t\r\n\tsubmenuItem.style.visibility = 'visible';\r\n\tfor(i =0;
+        i<rowCount; i++)\r\n\t\t{\r\n\t\t\titem=submenu + i;\r\n\t\t\titem1=submenu
+        + 'TD' + i;\r\n\t\t\tif (document.getElementById(item).currentStyle.color
+        == '#86bd20')\r\n\t\t\t\t{\r\n\t\t\t\t\tdocument.getElementById(item1).style.background
+        = '#EFEFEF';\r\n\t\t\t\t}\r\n\t\t\telse\r\n\t\t\t\t{\r\n\t\t\t\t\tdocument.getElementById(item1).style.background
+        = '#C0C0C0';\r\n\t\t\t\t}\r\n\t\t}\r\n}\r\n\r\nfunction mouseOut(submenu)\r\n{\r\n\tvar
+        submenuItem = document.getElementById(submenu);\r\n\tsubmenuItem.style.visibility
+        = 'hidden';\r\n}\r\n</script>\r\n\r\n</head>\r\n\r\n<body topmargin=\"0\"
+        leftmargin=\"0\" rightmargin=\"0\" bottommargin=\"0\" bgcolor=\"#575A5C\">\r\n\r\n<table
+        border=\"0\" id=\"table2\" width=\"958px\" cellspacing=\"0px\" bgcolor=\"#FFFFFF\"
+        \ align=center  cellspacing=\"0\" cellpadding=\"0\" >\r\n\t\t<tr>\r\n\t\t\t<td
+        align=\"center\" height=\"55px\" valign=\"bottom\" width=\"958px\">\r\n\t\t\t<img
+        border=\"0\" src=\"/images/headerTop.GIF\">\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td
+        valign=\"top\">\r\n\t\t\t\t<table border=\"0px\" width=\"900px\" id=\"table7\"
+        align=center  cellspacing=\"0\" cellpadding=\"0\" >\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<td
+        align=\"right\" valign=\"top\">\r\n\t\t\t\t\t\t\t<form method=\"get\" action=\"http://www.google.com/search\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/Default.asp\">Home</a> | \r\n\t\t\t\t\t\t\t\t<a href=\"/Contacts.asp\">Contact
+        us</a> | \r\n\t\t\t\t\t\t\t\t<a href=\"/Feedback.asp\">Feedback</a> | Search\r\n\t\t\t\t\t\t\t\t<input
+        type=\"text\" name=\"q\" size=\"8\" value=\"\"/>\r\n\t\t\t\t\t\t\t\t<input
+        type=\"submit\" value=\"Go\"/>\r\n\t\t\t\t\t\t\t\t<input type=\"hidden\"  name=\"sitesearch\"
+        value=\"bot-tz.org\"/>\r\n\t\t\t\t\t\t\t</form>\t\t\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</table>\r\n\t\t\t\t<table
+        border=\"0px\" id=\"table8\" width=\"840px\" align=\"center\"  cellspacing=\"0\"
+        cellpadding=\"0\" >\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<td width=\"27%\" align=\"left\"
+        valign=\"Bottom\">\r\n\t\t\t\t\t\t\t<img border=\"1\" src=\"/images/arm.png\"
+        lowsrc=\"Bank%20of%20Tanzania%20Logo\" longdesc=\"Bank of Tanzania Logo\"
+        alt=\"Bank of Tanzania Logo\" >\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t<td  width=\"46%\"
+        align=\"left\" valign=\"Bottom\">\r\n\t\t\t\t\t\t\t<img border=\"0\" src=\"/images/BOTnameRGB096over192-3.gif\"
+        lowsrc=\"Bank%20of%20Tanzania\" alt=\"Bank of Tanzania\" longdesc=\"Bank of
+        Tanzania\" >\r\n\t\t\t\t\t\t</td>\r\n            <td width=\"27%\" align=\"right\"
+        valign=\"Bottom\">\r\n              <img border=\"1\" src=\"/images/BOTgoldLogo10.jpg\"
+        lowsrc=\"Bank%20of%20Tanzania%20Logo\" longdesc=\"Bank of Tanzania Logo\"
+        alt=\"Bank of Tanzania Logo\" >\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</table>\r\n\t\t\t</td>\r\n\t\t</tr>\t\r\n\t\t<tr>\r\n\t\t\t<td
+        valign=\"middle\">\r\n\t\t\t\t\t<table border=\"0\" id=\"table3\" cellspacing=\"0\"
+        cellpadding=\"0\" height=\"17px\" align=\"center\">\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"center\">\r\n\t\t\t\t\t\t\t\t<img border=\"0\" src=\"/images/FlagColours.jpg\"
+        width=\"884px\" height=\"9px\">\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t</table>\r\n\t\t\t</td>\r\n\t\t</tr>\t\r\n\t\t<tr
+        bgcolor=\"#FFFFFF\">\r\n\t\t\t<td  height=\"26\" valign=\"top\" bgcolor=\"#FFFFFF\"
+        nowrap> \r\n\t\t\t\t<div align=\"center\" id = \"yCoordinate\" style=\"position:Relative;\">\r\n\t\t\t\t\t<a
+        href=\"/AboutBOT/AboutBOT.asp\" id = \"AboutBOTlink\" onmouseOver=\"mouseOver('AboutBOTsubmenu','AboutBOTlink')\"
+        onmouseOut=\"mouseOut('AboutBOTsubmenu')\">\r\n\t\t\t\t\t<img border=\"0\"
+        src=\"/images/AboutBOT.JPG\" width=\"150\" height=\"26\" lowsrc=\"About%20the%20Bank\"
+        longdesc=\"About the Bank\" alt=\"About the Bank\"></a><a href=\"/Publications/PublicationsAndStatistics.asp\"
+        id = \"PublicationsLink\" onmouseOver=\"mouseOver('Publicationssubmenu','PublicationsLink')\"
+        onmouseOut=\"mouseOut('Publicationssubmenu')\"><img border=\"0\" src=\"/images/Publicationss.JPG\"
+        width=\"150\" height=\"26\" lowsrc=\"Publications\" longdesc=\"Publications\"
+        alt=\"Publications\"></a><a href=\"/FinancialMarkets/FinancialMarkets.asp\"
+        id = \"FinancialMarketsLink\" onmouseOver=\"mouseOver('FinancialMarketsSubmenu','FinancialMarketsLink')\"
+        onmouseOut=\"mouseOut('FinancialMarketsSubmenu')\"><img border=\"0\" src=\"/images/FinancialMarkets.JPG\"
+        width=\"150\" height=\"26\" lowsrc=\"Financial%20Markets\" longdesc=\"Financial
+        Markets\" alt=\"Financial Markets\"></a><a href=\"/BankingOperations/BankingOperations.asp\"
+        id = \"BankingOperationsLink\" onmouseOver=\"mouseOver('BankingOperationsSubmenu','BankingOperationsLink')\"
+        onmouseOut=\"mouseOut('BankingOperationsSubmenu')\"><img border=\"0\" src=\"/images/BankingOperations.JPG\"
+        width=\"150\" height=\"26\" lowsrc=\"Banking%20Operations\" longdesc=\"Banking
+        Operations\" alt=\"Banking Operations\"></a><a href=\"/BankingSupervision/BankingSupervision.asp\"
+        id = \"BankingSupervisionLink\" onmouseOver=\"mouseOver('BankingSupervisionSubmenu','BankingSupervisionLink')\"
+        onmouseOut=\"mouseOut('BankingSupervisionSubmenu')\"><img border=\"0\" src=\"/images/BankingSupervision.JPG\"
+        width=\"150\" height=\"26\" lowsrc=\"Banking%20Supervision\" longdesc=\"Banking
+        Supervision\" alt=\"Banking Supervision\"></a><a href=\"/PaymentSystem/PaymentSystem.asp\"
+        id = \"PaymentSystemLink\" onmouseOver=\"mouseOver('PaymentSystemSubmenu','PaymentSystemLink')\"
+        onmouseOut=\"mouseOut('PaymentSystemSubmenu')\"><img border=\"0\" src=\"/images/PaymentSystem.JPG\"
+        width=\"150\" height=\"26\" lowsrc=\"Payment%20System.JPG\" longdesc=\"Payment
+        System\" alt=\"Payment System\"></a>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div onmouseOver=\"mouseOver('AboutBOTsubmenu','AboutBOTlink')\"
+        onmouseOut=\"mouseOut('AboutBOTsubmenu')\">\t\t\t\r\n\t\t\t\t\t<table id =
+        \"AboutBOTsubmenu\" cellspacing=\"1px\" cellpadding=\"1px\" width=\"270px\"
+        style=\"position:Absolute; z-Index:130; top:18px; display:block; visibility:hidden;\">\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"AboutBOTsubmenuTD0\" width=\"270px\" nowrap bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/AboutBOT/AboutBOT.asp\" id = \"AboutBOTsubmenu0\">About the Bank -
+        Home</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"AboutBOTsubmenuTD1\" width=\"270px\" nowrap bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/AboutBOT/BOTFunction.asp\" id = \"AboutBOTsubmenu1\">Primary Objective
+        and Function of the Bank</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"AboutBOTsubmenuTD2\" width=\"270px\" nowrap bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        target=\"_blank\" href=\"/AboutBOT/BOTAct2006.pdf\" id = \"AboutBOTsubmenu2\">BOT
+        Act, 2006</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"AboutBOTsubmenuTD3\" width=\"270px\" nowrap bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/AboutBOT/BoardOfDirectors.asp\" id = \"AboutBOTsubmenu3\">Board of
+        Directors</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"AboutBOTsubmenuTD4\" width=\"270px\" nowrap bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/AboutBOT/BOTLocation.asp\" id = \"AboutBOTsubmenu4\">BOT Location</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"AboutBOTsubmenuTD5\" width=\"270px\" nowrap bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/AboutBOT/BOTHistory.asp\" id = \"AboutBOTsubmenu5\">History of the
+        Bank</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"AboutBOTsubmenuTD6\" width=\"270px\" nowrap bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/AboutBOT/BOTWebsite.asp\" id = \"AboutBOTsubmenu6\">BOT Website</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"AboutBOTsubmenuTD7\" width=\"270px\" nowrap bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/AboutBOT/FormerGovernors.asp\" id = \"AboutBOTsubmenu7\">Governors
+        and Deputy Governors</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</div>\t\t\t\t\r\n\t\t\t\t<div
+        onmouseOver=\"mouseOver('Publicationssubmenu','PublicationsLink')\" onmouseOut=\"mouseOut('Publicationssubmenu')\">\t\t\t\r\n\t\t\t\t\t<table
+        id = \"Publicationssubmenu\" cellspacing=\"1px\" cellpadding=\"1px\" width=\"300px\"
+        style=\"position:Absolute; z-Index:130; top:18px;  display:block; visibility:hidden;\">\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"PublicationssubmenuTD0\" nowrap width=\"300px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/Publications/PublicationsAndStatistics.asp\" id = \"Publicationssubmenu0\">Publications
+        - Home</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"PublicationssubmenuTD1\" nowrap width=\"300px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/Publications/PublicationsAndStatistics.asp#RegularPublications\" id
+        = \"Publicationssubmenu1\">Regular Publications</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"PublicationssubmenuTD2\" nowrap width=\"300px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/Publications/PublicationsAndStatistics.asp#Statistics\" id = \"Publicationssubmenu2\">Statistics
+        of Major Macroeconomic Indicators</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"PublicationssubmenuTD3\" nowrap width=\"300px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href=\"/Publications/PublicationsAndStatistics.asp#FinancialStatements\" id
+        = \"Publicationssubmenu3\">Financial Statements</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+        onmouseOver=\"mouseOver('FinancialMarketsSubmenu','FinancialMarketsLink')\"
+        onmouseOut=\"mouseOut('FinancialMarketsSubmenu')\">\t\t\t\r\n\t\t\t\t\t<table
+        id = \"FinancialMarketsSubmenu\" cellspacing=\"1px\" cellpadding=\"1px\" width=\"250\"
+        style=\"position:Absolute; z-Index:130; top:18px;  display:block; visibility:hidden;\">\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"FinancialMarketsSubmenuTD0\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/FinancialMarkets/FinancialMarkets.asp'
+        id = \"FinancialMarketsSubmenu0\">Financial Markets - Home</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"FinancialMarketsSubmenuTD1\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/FinancialMarkets/FinMarketsInTanzania.asp'
+        id = \"FinancialMarketsSubmenu1\">Financial Markets in Tanzania</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"FinancialMarketsSubmenuTD2\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/FinancialMarkets/FinancialMarkets.asp#GovernmentSecurities'
+        id = \"FinancialMarketsSubmenu2\">Government Securities</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"FinancialMarketsSubmenuTD3\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/FinancialMarkets/FinancialMarkets.asp#ApplicationForms'
+        id = \"FinancialMarketsSubmenu3\">Application Forms</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"FinancialMarketsSubmenuTD4\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/FinancialMarkets/FinancialMarkets.asp#InterbankMoneyMarkets'
+        id = \"FinancialMarketsSubmenu4\">Interbank Money Markets</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"FinancialMarketsSubmenuTD5\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/FinancialMarkets/FinancialMarkets.asp#Repo'
+        id = \"FinancialMarketsSubmenu5\">Repo</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"FinancialMarketsSubmenuTD6\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/FinancialMarkets/FinancialMarkets.asp#ForeignExchangeMarkets'
+        id = \"FinancialMarketsSubmenu6\">Foreign Exchange Markets</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n
+        \                                                     <tr><td align=\"left\"
+        id = \"FinancialMarketsSubmenuTD7\" nowrap width=\"250px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href='/FinancialMarkets/FinancialMarkets.asp#BoT-CDS' id = \"FinancialMarketsSubmenu7\">BoT
+        Central Depository System</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</div>\t\r\n\t\t\t\t<div
+        onmouseOver=\"mouseOver('BankingOperationsSubmenu','BankingOperationsLink')\"
+        onmouseOut=\"mouseOut('BankingOperationsSubmenu')\">\t\t\t\r\n\t\t\t\t\t<table
+        id = \"BankingOperationsSubmenu\" cellspacing=\"1px\" cellpadding=\"1px\"
+        width=\"260px\" style=\"position:Absolute; z-Index:130; top:18px;  display:block;
+        visibility:hidden;\">\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td align=\"left\"
+        id = \"BankingOperationsSubmenuTD0\" nowrap width=\"260px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href='/BankingOperations/BankingOperations.asp' id = \"BankingOperationsSubmenu0\">Banking
+        Operations - Home</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"BankingOperationsSubmenuTD2\" nowrap width=\"260px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingOperations/Banking_Dir.asp'
+        id = \"BankingOperationsSubmenu2\">Banking Directorate</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"BankingOperationsSubmenuTD3\" nowrap width=\"260px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingOperations/Banking_Dept.asp'
+        id = \"BankingOperationsSubmenu3\">Banking Department Operations</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"BankingOperationsSubmenuTD3\" nowrap width=\"260px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingOperations/Currency.asp'
+        id = \"BankingOperationsSubmenu3\">Currency Department Operations</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</div>\t\t\t\t\r\n\t\t\t\t<div
+        onmouseOver=\"mouseOver('BankingSupervisionSubmenu','BankingSupervisionLink')\"
+        onmouseOut=\"mouseOut('BankingSupervisionSubmenu')\">\t\t\t\r\n\t\t\t\t\t<table
+        id = \"BankingSupervisionSubmenu\" cellspacing=\"1px\" cellpadding=\"1px\"
+        width=\"250px\" style=\"position:Absolute; z-Index:130; top:18px;  display:block;
+        visibility:hidden;\">\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td align=\"left\"
+        id = \"BankingSupervisionSubmenuTD0\" nowrap width=\"250px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href='/BankingSupervision/BankingSupervision.asp' id = \"BankingSupervisionSubmenu0\">Banking
+        Supervision - Home</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"BankingSupervisionSubmenuTD1\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingSupervision/RegisteredBanks.asp'
+        id = \"BankingSupervisionSubmenu1\">Commercial Banks</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"BankingSupervisionSubmenuTD3\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingSupervision/RegisteredFinancialInst.asp'
+        id = \"BankingSupervisionSubmenu3\" target=\"_blank\">Financial Institutions</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"BankingSupervisionSubmenuTD4\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingSupervision/BureauOperators.asp'
+        id = \"BankingSupervisionSubmenu4\">Bureaux de Change Operators</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"BankingSupervisionSubmenuTD5\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingSupervision/SupervisoryMethodololgies.asp'
+        id = \"BankingSupervisionSubmenu5\">Supervisory Methodologies </a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"BankingSupervisionSubmenuTD6\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingSupervision/SupervisoryMethodololgies.asp#LicensingConditions'
+        id = \"BankingSupervisionSubmenu6\">Licensing Conditions</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"BankingSupervisionSubmenuTD7\" nowrap width=\"250px\"
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingSupervision/Approved
+        Independent Audit Firms March 2016.pdf' id = \"BankingSupervisionSubmenu7\">List
+        of Approved Auditors</a>\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\t\t\t\t\t\t\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</div>\t\t\r\n\t\t\t\t<div
+        onmouseOver=\"mouseOver('PaymentSystemSubmenu','PaymentSystemLink')\" onmouseOut=\"mouseOut('PaymentSystemSubmenu')\">\t\t\t\r\n\t\t\t\t\t<table
+        id = \"PaymentSystemSubmenu\" cellspacing=\"1px\" cellpadding=\"1px\" width=\"300\"
+        style=\"position:Absolute; z-Index:130; top:18px;  display:block; visibility:hidden;\">\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"PaymentSystemSubmenuTD0\" nowrap width=\"300px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href='/PaymentSystem/paymentSystem.asp' id = \"PaymentSystemSubmenu0\">Payment
+        System - Home</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"PaymentSystemSubmenuTD1\" nowrap width=\"300px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href='/PaymentSystem/paymentSystem.asp#Overview' id = \"PaymentSystemSubmenu1\">Payment
+        Systems Publications</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"PaymentSystemSubmenuTD2\" nowrap width=\"300px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href='/PaymentSystem/paymentSystem.asp#TISS' id = \"PaymentSystemSubmenu2\">Payment
+        Systems  Guidelines</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"PaymentSystemSubmenuTD3\" nowrap width=\"300px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href='/PaymentSystem/paymentSystem.asp#PublicationsOnPaymentSystem' id = \"PaymentSystemSubmenu3\">Payment
+        Systems News and Events</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"PaymentSystemSubmenuTD4\" nowrap width=\"300px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href='/PaymentSystem/paymentSystem.asp#Reports' id = \"PaymentSystemSubmenu4\">Payment
+        Systems Newsletter</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"PaymentSystemSubmenuTD5\" nowrap width=\"300px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href='/PaymentSystem/ECHtermsDefs.asp' id = \"PaymentSystemSubmenu5\">Payment
+        Systems Frequently asked questions</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        align=\"left\" id = \"PaymentSystemSubmenuTD9\" nowrap width=\"300px\" bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a
+        href='/PaymentSystem/NPSoverview.asp#CONTACTS' id = \"PaymentSystemSubmenu9\">Contacts</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\t\t\t\t\t\t\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</div>\t\t\r\n\t\t\t</td>\r\n\t\t</tr>\r\n</table>\r\n\r\n<div
+        align=\"center\">\r\n\r\n<table align=\"center\" border=\"0\" width=\"958px\"
+        id=\"table1\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#FFFFFF\">\r\n\t<tr>\r\n\t\t<td>\r\n\t\t\t\r\n\t\t<table
+        border=\"0\" width=\"900px\" align=\"center\"><tr><td>\r\n\t\t\r\n<h1 align=\"center\">Financial
+        Markets</h1>\r\n\t\t\r\n<h2 align=\"center\">Indicative Foreign Exchange Market
+        Rates</h2>\r\n\r\n<div align=\"center\">\r\n  <table>\r\n  <tr>\r\n    <td
+        valign=\"top\" width=\"295\" align=\"center\">\r\n    <table border=\"0\"
+        cellpadding=\"0\" cellspacing=\"1\">\r\n\t\t<tr align=\"center\">\r\n      \r\n
+        \       \t<th align=\"right\" nowrap bgcolor=\"#808080\" height=\"13\" colspan=\"3\">\r\n\t\t\t<p
+        align=\"center\">\r\n\t\t\t<font face=\"verdana, Arial\" size=\"2\" color=\"#FFFFFF\">Exchange
+        Rates for 16/Jun/2016</font></th>\r\n\t\t</tr>\r\n\t\t<tr align=\"center\">\r\n\t\t\t<th
+        align=\"right\" nowrap bgcolor=\"#808080\" height=\"13\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" size=\"2\" color=\"#FFFFFF\">Currency in 100 Units</font></th>\r\n\t\t\t<th
+        align=\"right\" nowrap bgcolor=\"#808080\" height=\"13\">\r\n\t\t\t<p align=\"center\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" size=\"2\" color=\"#FFFFFF\">Spot Buying</font></th>\r\n
+        \ <center>\r\n        \t<th align=\"right\" nowrap bgcolor=\"#808080\" height=\"13\">\r\n\t\t\t<p
+        align=\"center\">\r\n\t\t\t<font face=\"verdana, Arial\" size=\"2\" color=\"#FFFFFF\">Spot
+        Selling</font></th>\r\n\t\t</tr>\r\n\t\t<tr align=\"center\">\r\n\t\t\t<td
+        align=\"right\" nowrap valign=\"middle\" height=\"13\" bgcolor=\"#EEEEEE\"
+        colspan=\"3\">\r\n\t\t\t<p align=\"center\"><b><font size=\"2\">EAST AFRICAN
+        CURRENCIES</font></b></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td align=\"right\"
+        nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana, Arial\"
+        color=\"#000000\" size=\"1\">Kenya SHS</font></td>\r\n\t\t\t<u>\r\n\t\t\t\r\n</u>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">2,147.16</font></td>\r\n\t\t\t<td align=\"right\"
+        nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana, Arial\"
+        color=\"#000000\" size=\"1\">2,164.36</font></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">Uganda SHS</font></td>\r\n\t\t\t\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">61.06</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">65.41</font></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">Rwandan Franc</font></td>\r\n\t\t\t<u>\r\n\t\t\t\r\n\t\t\t\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">288.95</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">296.18</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Burundi Franc</font></td>\r\n\t\t\t<u>\r\n\t\r\n\t\t\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">208.05</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">209.61</font></td>\r\n\t\t</tr>\r\n\t\t\r\n\t\t\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap valign=\"middle\" height=\"13\"
+        bgcolor=\"#EEEEEE\">\r\n\t\t\t&nbsp;</td>\r\n\t\t\t<td align=\"right\" nowrap
+        valign=\"middle\" height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t&nbsp;</td>\r\n\t\t\t<td
+        align=\"right\" nowrap valign=\"middle\" height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t&nbsp;</td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td nowrap valign=\"middle\" height=\"13\" bgcolor=\"#EEEEEE\"
+        colspan=\"3\">\r\n\t\t\t<b><font size=\"2\">OTHER SELECTED CURRENCIES</font></b></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap valign=\"middle\" height=\"13\"
+        bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana, Arial\" color=\"#000000\"
+        size=\"1\">USD</font></td>\r\n\t\t\t<u>\r\n\r\n      </u>\r\n\t\t\t<td align=\"right\"
+        nowrap valign=\"middle\" height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">217,293.07</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap valign=\"middle\" height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">219,466.00</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Pound STG</font></td>\r\n\t\t\t<u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">307,708.72</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">310,917.48</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">EURO</font></td>\r\n\t\t\t<u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">243,759.37</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">246,240.85</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Canadian $</font></td>\r\n\t\t\t<u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">168,601.08</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">170,247.46</font></td>\r\n\t\t</tr><u>\r\n
+        \     \r\n      \t\r\n\r\n      </u>\r\n\t\t<tr align=\"center\">\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">Switz.\r\n          Franc</font></td><u>\r\n\r\n
+        \     \r\n      </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">225,407.75</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">227,449.48</font></td>\r\n\t\t</tr><u>\r\n
+        \     \t\r\n      \r\n      </u>\r\n\t\t<tr align=\"center\">\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">Japanese\r\n        YEN</font></td><u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">2,048.00</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">2,067.51</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Swedish\r\n          Kronor</font></td><u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">26,025.93</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">26,277.37</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Norweg.\r\n          Kronor</font></td><u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">26,058.39</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">26,309.19</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Danish\r\n          Kronor</font></td><u>\r\n\r\n
+        \     \r\n      </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">32,786.09</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">33,108.95</font></td>\r\n\t\t</tr><u>\r\n\r\n
+        \     \t\r\n      \r\n      </u>\r\n\t\t<tr align=\"center\">\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">Australian $</font></td>\r\n\t\t\t<u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">160,536.12</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">162,251.21</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Indian RPS</font></td>\r\n\t\t\t<u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">3,237.56</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">3,268.96</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Pakistan RPS</font></td>\r\n\t\t\t<u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">1,975.96</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">2,097.34</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Zambian\r\n          Kwacha</font></td><u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">41.49</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">41.92</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Malawian\r\n          Kwacha</font></td><u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">284.77</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">310.41</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Mozambique-MET</font></td>\r\n\t\t\t<u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">3,626.99</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">3,657.16</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Zimbabwe $</font></td>\r\n\t\t\t<u>\r\n\r\n
+        \     \r\n      </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">40.66</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">41.48</font></td>\r\n\t\t</tr><u>\r\n
+        \     \r\n      \t\r\n     \r\n      </u>\r\n\t\t<tr align=\"center\">\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">SDR</font></td>\r\n\t\t\t<u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">305,559.69</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">308,615.28</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Gold (T/O)</font></td>\r\n\t\t\t<u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">278,439,339.01</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">281,245,679.00</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">S.\r\n          African
+        Rand</font></td><u>\r\n\r\n      \r\n      </u>\r\n\t\t\t<td align=\"right\"
+        nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana, Arial\"
+        color=\"#000000\" size=\"1\">14,244.06</font></td>\r\n\t\t\t<td align=\"right\"
+        nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana, Arial\"
+        color=\"#000000\" size=\"1\">14,374.72</font></td>\r\n\t\t</tr><u>\r\n      \r\n
+        \     \t\r\n      \r\n      </u>\r\n\t\t<tr align=\"center\">\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">UAE\r\n          Dirham</font></td><u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">59,166.00</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">59,741.40</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Singapore $</font></td>\r\n\t\t\t<u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">160,375.72</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">161,871.96</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Honk\r\n          Kong
+        $</font></td><u>\r\n\r\n      </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\"
+        bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana, Arial\" color=\"#000000\"
+        size=\"1\">27,996.63</font></td>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\"
+        bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana, Arial\" color=\"#000000\"
+        size=\"1\">28,275.51</font></td>\r\n\t\t</tr>\r\n\t\t<tr align=\"center\">\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">Saud\r\n          Arabian Rial</font></td><u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">57,943.27</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">58,514.90</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Kuwait\r\n          Dinar</font></td><u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">720,826.24</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">727,455.33</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Botswana\r\n          Pula</font></td><u>\r\n\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">19,665.02</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">20,300.61</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Chinese Yuan</font></td>\r\n\t\t\t<u>\r\n\t\t\r\n\t\t\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">33,028.28</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">33,323.62</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Malaysia Ringgit</font></td>\r\n\t\t\t<u>\r\n\t\t\t\r\n\t\t\t\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">53,017.71</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">53,482.64</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">South Korea Won</font></td>\r\n\t\t\t<u>\r\n\t\t\t\t\r\n
+        \     </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">185.68</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">187.22</font></td>\r\n\t\t</tr>\r\n\t\t<tr
+        align=\"center\">\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">Newzealand</font></td>\r\n\t\t\t<u>\r\n\t\t\r\n\r\n
+        \       </u>\r\n\t\t\t<td align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font
+        face=\"verdana, Arial\" color=\"#000000\" size=\"1\">152,648.38</font></td>\r\n\t\t\t<td
+        align=\"right\" nowrap height=\"13\" bgcolor=\"#EEEEEE\">\r\n\t\t\t<font face=\"verdana,
+        Arial\" color=\"#000000\" size=\"1\">154,240.70</font></td>\r\n\t\t</tr>\r\n\t</table></center></td>\r\n
+        \ </tr>\r\n</table>\r\n</div>\r\n\t\t</td></tr></table>\r\n\t\t\t\t\t\r\n\t\t</td>\r\n\t</tr>\r\n</table>\r\n<table
+        border=\"0\" width=\"958\" id=\"table15\" align=\"center\" bgcolor=\"#FFFFFF\"
+        cellspacing=\"0\" cellpadding=\"0\">\r\n\t<tr>\r\n\t\t<td width=\"29px\">&nbsp;</td>\r\n\t\t<td
+        width=\"900px\" background=\"/images/bg.JPG\">\r\n\t\t\t<p align=\"center\">|
+        <a target=\"_blank\" href=\"/TrainingInstitute/\">Bank of Tanzania Training
+        Institute</a> | \r\n\t\t\t\t\t    <a  target=\"_blank\" href=\"https://owa.bot.go.tz/owa\">Webmail
+        Access</a> |\r\n\t\t\t                    <a href=\"/DepositInsuranceBoard/DepositInsuranceBoard.asp\">Deposit
+        Insurance Board</a> |\r\n\t\t\t                    <a href=\"/Archive/ArchiveDirectory.asp\">Archive
+        Directory</a> |\r\n\t\t\t                    <a href=\"/Adverts/Adverts.asp\">Jobs,
+        Tenders and Press Release</a> |\t\t\r\n\t\t</td>\r\n\t\t<td width=\"29px\">&nbsp;</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td
+        width=\"958\" colspan=\"3\" align=\"center\">\t\t\t\t\r\n\t\t\t<a href=\"/SiteMap.asp\">Site
+        Map</a> | <a href=\"/WebsiteDisclaimer.asp\">Website Disclaimer</a> | <a href=\"/PrivacyPolicy.asp\">Privacy
+        Policy</a> | <a href=\"/EmailDisclaimer.asp\">Email Disclaimer</a> | <a href=\"mailto:Webmaster@bot.go.tz\">Webmaster@bot.go.tz</a>\r\n\t\t</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td
+        colspan=\"3\" align=\"center\" height=\"32px\"  bgcolor=\"#575A5C\">\r\n\t\t\t<img
+        border=\"0\" src=\"/images/headerBottom.GIF\" width=\"958px\" height=\"32px\">\r\n\t\t</td>\r\n\t</tr>\r\n</table>\r\n\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Fri, 24 Jun 2016 12:35:08 GMT
+recorded_with: VCR 3.0.3

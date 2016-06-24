@@ -27,12 +27,19 @@ Or install it yourself as:
 
 ### Initialize (NOTE: the date used can affect the success of the import! method)
 
-  ```ruby 
-  hbr = HistoricBankRates::Rates.new(CentralBankOfKenya.new, Date.new(2016, 05, 30))
+  ```ruby
+  scraper = HistoricBankRates::BankScraper::CentralBankOfKenya.new
+  hbr = HistoricBankRates::Rates.new(scraper, Date.new(2016, 05, 30))
   hbr.import! # => true
   ```
 
 import! returns true if rates have been found. Might also throw HTTP errors. It will also return false when requesting rates for weekend days.
+
+Update an instance's import_date and rerun the import process:
+
+  ```ruby
+  hbr.import!(Date.new(2015, 06, 30)) # => true
+  ```
 
 ### Retrieve a specific rate
 
