@@ -28,7 +28,7 @@ Or install it yourself as:
 ### Initialize (NOTE: the date used can affect the success of the import! method)
 
   ```ruby
-  scraper = HistoricBankRates::BankScraper::CentralBankOfKenya.new
+  scraper = HistoricBankRates::BankScrapers::CentralBankOfKenya.new
   hbr = HistoricBankRates::Rates.new(scraper, Date.new(2016, 05, 30))
   hbr.import! # => true
   ```
