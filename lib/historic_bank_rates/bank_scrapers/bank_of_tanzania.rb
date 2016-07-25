@@ -58,7 +58,7 @@ module HistoricBankRates
       end
 
       def form_url
-        @form_url ||= 'http://www.bot-tz.org/FinancialMarkets/ExchangeRates/ShowExchangeRates.asp'
+        @form_url ||= 'https://www.bot.go.tz/FinancialMarkets/ExchangeRates/ShowExchangeRates.asp'
       end
 
       def form_params
