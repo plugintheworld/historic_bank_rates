@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://www.bot-tz.org/FinancialMarkets/ExchangeRates/ShowExchangeRates.asp
+    uri: https://www.bot.go.tz/FinancialMarkets/ExchangeRates/ShowExchangeRates.asp
     body:
       encoding: US-ASCII
       string: SelectedExchandeDate=06%2F16%2F16
@@ -10,11 +10,11 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
       Host:
-      - www.bot-tz.org
+      - www.bot.go.tz
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -25,17 +25,17 @@ http_interactions:
       Cache-Control:
       - private
       Content-Length:
-      - '37784'
+      - '37871'
       Content-Type:
       - text/html
       Server:
       - Microsoft-IIS/8.5
       Set-Cookie:
-      - ASPSESSIONIDACRQSDAA=MGBGPOICNJPJDODLNKIADGOB; path=/
+      - ASPSESSIONIDAWTASCSQ=PLPLILGCLBJPMBGKCHNHNBCF; secure; path=/
       X-Powered-By:
       - ASP.NET
       Date:
-      - Fri, 24 Jun 2016 12:35:04 GMT
+      - Mon, 25 Jul 2016 14:50:28 GMT
     body:
       encoding: UTF-8
       string: "\r\n<html>\r\n\r\n<head>\r\n<meta http-equiv=\"Content-Language\" content=\"en-gb\">\r\n<meta
@@ -216,11 +216,12 @@ http_interactions:
         href='/BankingSupervision/BankingSupervision.asp' id = \"BankingSupervisionSubmenu0\">Banking
         Supervision - Home</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
         align=\"left\" id = \"BankingSupervisionSubmenuTD1\" nowrap width=\"250px\"
-        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingSupervision/RegisteredBanks.asp'
-        id = \"BankingSupervisionSubmenu1\">Commercial Banks</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingSupervision/Directory
+        of Banks and Financial institutions operating in Tanzania  June 2016.pdf'
+        id = \"BankingSupervisionSubmenu1\">Banks and Financial Institutions</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t<!--<tr>\r\n\t\t\t\t\t\t\t<td
         align=\"left\" id = \"BankingSupervisionSubmenuTD3\" nowrap width=\"250px\"
         bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingSupervision/RegisteredFinancialInst.asp'
-        id = \"BankingSupervisionSubmenu3\" target=\"_blank\">Financial Institutions</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
+        id = \"BankingSupervisionSubmenu3\" target=\"_blank\">Financial Institutions</a>\r\n\t\t\t\t\t\t\t</td>-->\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
         align=\"left\" id = \"BankingSupervisionSubmenuTD4\" nowrap width=\"250px\"
         bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingSupervision/BureauOperators.asp'
         id = \"BankingSupervisionSubmenu4\">Bureaux de Change Operators</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
@@ -232,7 +233,7 @@ http_interactions:
         id = \"BankingSupervisionSubmenu6\">Licensing Conditions</a>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td
         align=\"left\" id = \"BankingSupervisionSubmenuTD7\" nowrap width=\"250px\"
         bgcolor=\"#C0C0C0\">\r\n\t\t\t\t\t\t\t\t<a href='/BankingSupervision/Approved
-        Independent Audit Firms March 2016.pdf' id = \"BankingSupervisionSubmenu7\">List
+        Independent Audit Firms 2 JUNE 2016.pdf' id = \"BankingSupervisionSubmenu7\">List
         of Approved Auditors</a>\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\t\t\t\t\t\t\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</div>\t\t\r\n\t\t\t\t<div
         onmouseOver=\"mouseOver('PaymentSystemSubmenu','PaymentSystemLink')\" onmouseOut=\"mouseOut('PaymentSystemSubmenu')\">\t\t\t\r\n\t\t\t\t\t<table
         id = \"PaymentSystemSubmenu\" cellspacing=\"1px\" cellpadding=\"1px\" width=\"300\"
@@ -505,5 +506,5 @@ http_interactions:
         colspan=\"3\" align=\"center\" height=\"32px\"  bgcolor=\"#575A5C\">\r\n\t\t\t<img
         border=\"0\" src=\"/images/headerBottom.GIF\" width=\"958px\" height=\"32px\">\r\n\t\t</td>\r\n\t</tr>\r\n</table>\r\n\r\n</body>\r\n</html>\r\n"
     http_version: 
-  recorded_at: Fri, 24 Jun 2016 12:35:05 GMT
+  recorded_at: Mon, 25 Jul 2016 14:50:31 GMT
 recorded_with: VCR 3.0.3
