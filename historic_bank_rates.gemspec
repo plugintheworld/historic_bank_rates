@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name         = 'historic_bank_rates'
-  s.version      = '0.2.1'
+  s.version      = '0.2.2'
   s.platform     = Gem::Platform::RUBY
-  s.date         = '2016-06-21'
+  s.date         = '2016-08-01'
   s.summary      = 'Scrapes various bank websites to generate a list of
                     currencies and their historic rates.'
   s.description  = "Wraps a simple scraper to retrieve the historic exchange

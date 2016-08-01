@@ -14,7 +14,7 @@ describe HistoricBankRates::BankScrapers::BankOfTanzania do
     context 'when the scraper is successful', :vcr do
       subject { rate_scraper.call(valid_date) }
       it { should be_a_kind_of(Hash) }
-      it { should include('RWF', 'BFI', 'MWK') }
+      it { should include('RWF', 'BFI', 'MWK', 'EUR', 'USD') }
     end
 
     context 'when the scraper fails', :vcr do
@@ -23,7 +23,7 @@ describe HistoricBankRates::BankScrapers::BankOfTanzania do
       end
       subject { rate_scraper.call(valid_date) }
       it { should be_a_kind_of(Hash) }
-      it { should_not include('RWF', 'BFI', 'MWK') }
+      it { should_not include('RWF', 'BFI', 'MWK', 'EUR', 'USD') }
     end
   end
 

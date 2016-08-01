@@ -48,8 +48,8 @@ module HistoricBankRates
 
         Hash[rows.map do |row|
                currency = TRANSLATE[row.css(':nth-child(1) font').text.split.join(' ')]
-               buy = Float(row.css(':nth-child(3) font').text.delete(',', '')) rescue nil
-               sell = Float(row.css(':nth-child(4) font').text.delete(',', '')) rescue nil
+               buy = Float(row.css(':nth-child(3) font').text.delete(',')) rescue nil
+               sell = Float(row.css(':nth-child(4) font').text.delete(',')) rescue nil
                next if currency.nil? || buy.nil? || sell.nil?
 
                # average of by and sell, divide by 100 b/c conversion is given in 100 units
