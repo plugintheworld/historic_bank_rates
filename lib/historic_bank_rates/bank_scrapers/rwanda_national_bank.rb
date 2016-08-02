@@ -16,9 +16,9 @@ module HistoricBankRates
         rows = dom.css(element_matcher)
 
         Hash[(0...rows.length).step(4).map do |index|
-        currency = rows[index].css(':nth-child(1)').text
+          currency = rows[index].css(':nth-child(1)').text
           next if currency.empty?
-          avrg = rows[index+1].text
+          avrg = rows[index+1].text.delete(',')
           next if avrg.empty?
 
           [currency, Float(avrg)] rescue nil
@@ -30,7 +30,7 @@ module HistoricBankRates
       end
 
       def form_params
-        { 'tx_excratearch_excratearch[date]' => '12-07-2016',
+        { 'tx_excratearch_excratearch[date]' => start_date.strftime('%d-%m-%Y'), #12-07-2016
           'tx_excratearch_excratearch[getHistory]' => 'Get+History'
         }
       end

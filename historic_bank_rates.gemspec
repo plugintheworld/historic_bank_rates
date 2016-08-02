@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name         = 'historic_bank_rates'
-  s.version      = '0.2.2'
+  s.version      = '0.2.3'
   s.platform     = Gem::Platform::RUBY
   s.date         = '2016-08-01'
   s.summary      = 'Scrapes various bank websites to generate a list of
