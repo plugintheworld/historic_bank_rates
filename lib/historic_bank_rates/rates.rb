@@ -1,6 +1,7 @@
 require 'date'
 require_relative 'bank_scrapers/central_bank_of_kenya'
 require_relative 'bank_scrapers/bank_of_tanzania'
+require_relative 'bank_scrapers/rwanda_national_bank'
 
 module HistoricBankRates
   class MissingRates < StandardError; end
