@@ -1,4 +1,5 @@
 require_relative 'rate_scraper.rb'
+require 'json'
 
 module HistoricBankRates
   module BankScrapers
@@ -33,40 +34,38 @@ module HistoricBankRates
 
       def rates
         response = Net::HTTP.post_form(URI(form_url), form_params)
-        dom = Nokogiri::HTML(response.body)
-        rows = dom.css(element_matcher)
+        data = JSON.parse(response.body)
 
-        Hash[rows.map do |row|
-               currency = TRANSLATE[row.css(':nth-child(2)').text]
-               next if currency.nil?
-               next if currency.empty?
-               avrg = row.css(':nth-child(5)').text
-               next if avrg.nil?
-               next if avrg.empty?
+        Hash[data['data'].map do |row|
+               currency = TRANSLATE[row[1]]
+               next if currency.nil? || currency.empty?
+               avrg = row[2]
+               next if avrg.nil? || avrg.empty?
 
                [currency, Float(avrg)] rescue nil
         end.compact]
+      rescue JSON::ParserError
+        {}
       end
 
       def form_url
-        @form_url ||= 'https://www.centralbank.go.ke/index.php/rate-and-statistics/exchange-rates-2'
+        @form_url ||= 'https://www.centralbank.go.ke/wp-admin/admin-ajax.php?action=get_wdtable&table_id=32'
       end
 
       def form_params
+        date = start_date.strftime('%d/%m/%y')
         {
-          'date'    => start_date.strftime('%d'),
-          'month'   => start_date.strftime('%m').upcase,
-          'year'    => start_date.strftime('%Y'),
-          'tdate'   => start_date.strftime('%d'),
-          'tmonth'  => start_date.strftime('%m').upcase,
-          'tyear'   => start_date.strftime('%Y'),
-          'currency' => '',
-          'searchForex' => 'Search'
+          'draw' => 3,
+          'columns' => [{
+            'data' => 0,
+            'name' => 'date_r',
+            'searchable' => 'true',
+            'search' => { 'value' => "#{date}~#{date}" }
+          }],
+          'start' => 0,
+          'length' => 40,
+          'sRangeSeparator' => '~'
         }
-      end
-
-      def element_matcher
-        '#cont1 > #cont3 > div.item-page > #interbank > table > tr > td > table > tr'
       end
     end
   end
