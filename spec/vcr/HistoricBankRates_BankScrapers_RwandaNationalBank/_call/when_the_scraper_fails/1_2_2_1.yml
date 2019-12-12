@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://www.bnr.rw/index
+    body:
+      encoding: US-ASCII
+      string: tx_bnrcurrencymanager_master%5Bfrom_date%5D=2016%2F06%2F16&tx_bnrcurrencymanager_master%5Bdate%5D=2016%2F06%2F16&tx_bnrcurrencymanager_master%5Bdownload%5D=Download
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.bnr.rw
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Thu, 12 Dec 2019 12:10:46 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Location:
+      - https://www.bnr.rw/index
+      Content-Length:
+      - '208'
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+        <html><head>
+        <title>302 Found</title>
+        </head><body>
+        <h1>Found</h1>
+        <p>The document has moved <a href="https://www.bnr.rw/index">here</a>.</p>
+        </body></html>
+    http_version: 
+  recorded_at: Thu, 12 Dec 2019 12:20:59 GMT
+recorded_with: VCR 5.0.0

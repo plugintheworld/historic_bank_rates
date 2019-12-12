@@ -1,4 +1,5 @@
 require_relative 'rate_scraper.rb'
+require 'csv'    
 
 module HistoricBankRates
   module BankScrapers
@@ -12,31 +13,28 @@ module HistoricBankRates
 
       def rates
         response = Net::HTTP.post_form(URI(form_url), form_params)
-        dom = Nokogiri::HTML(response.body)
-        rows = dom.css(element_matcher)
-
-        Hash[(0...rows.length).step(4).map do |index|
-          currency = rows[index].css(':nth-child(1)').text
-          next if currency.empty?
-          avrg = rows[index+1].text.delete(',')
-          next if avrg.empty?
-
-          [currency, Float(avrg)] rescue nil
+        csv = CSV.parse(response.body, :headers => true)
+        Hash[csv.map do |row|
+          currency = row['Code']&.strip
+          next if currency.nil? || currency.empty?
+          value = row['average value']&.strip.delete(',')
+          next if value.nil? || value.empty?
+          [currency, Float(value)] rescue nil
         end.compact]
+      rescue CSV::MalformedCSVError
+        {}
       end
 
       def form_url
-        @form_url ||= 'http://www.bnr.rw/index.php?id=89'
+        @form_url ||= 'https://www.bnr.rw/footer/quick-links/exchange-rate/?tx_bnrcurrencymanager_master[action]=archive&tx_bnrcurrencymanager_master[controller]=Currency'
       end
 
       def form_params
-        { 'tx_excratearch_excratearch[date]' => start_date.strftime('%d-%m-%Y'), #12-07-2016
-          'tx_excratearch_excratearch[getHistory]' => 'Get+History'
+        {
+          'tx_bnrcurrencymanager_master[from_date]' => start_date.strftime('%Y/%m/%d'), #2016/12/31
+          'tx_bnrcurrencymanager_master[date]' => start_date.strftime('%Y/%m/%d'), #2016/12/31
+          'tx_bnrcurrencymanager_master[download]' => 'Download'
         }
-      end
-
-      def element_matcher
-        'tbody > tr > td'
       end
     end
   end
